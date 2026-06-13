@@ -21,8 +21,7 @@ Midnight navy, starlight blue, ice-cyan — and one red ribbon.
 ## The palette
 
 Two variants — **Cirno** (dark) and **Cirno Day** (light) — both contrast-checked
-to clear WCAG AA. Everything traces back to four colours pulled out of the wallpaper:
-her **cyan eyes**, the **red ribbon**, the **starlight**, and the **night sky**.
+to clear WCAG AA.
 
 ![Cirno — dark](assets/palette-dark.png)
 ![Cirno Day — light](assets/palette-light.png)
@@ -39,7 +38,7 @@ truth is **[`palette/cirno.json`](palette/cirno.json)**.
 
 30 apps, 48 files. Dark everywhere; light (**Cirno Day**) where the format supports it.
 
-### 🖥️ Terminals
+### Terminals
 
 | App | File | Install |
 |-----|------|---------|
@@ -49,14 +48,14 @@ truth is **[`palette/cirno.json`](palette/cirno.json)**.
 | **WezTerm** | [`themes/wezterm/cirno.toml`](themes/wezterm/cirno.toml) | drop in `~/.config/wezterm/colors/`, set `color_scheme = "Cirno"` |
 | **foot** | [`themes/foot/cirno.ini`](themes/foot/cirno.ini) | `include` it from `foot.ini` |
 
-### 🪟 Multiplexers
+### Multiplexers
 
 | App | File | Install |
 |-----|------|---------|
 | **tmux** | [`themes/tmux/cirno.tmux`](themes/tmux/cirno.tmux) | `run-shell ~/.../cirno.tmux` in `tmux.conf` |
 | **Zellij** | [`themes/zellij/cirno.kdl`](themes/zellij/cirno.kdl) | copy to `~/.config/zellij/themes/`, set `theme "cirno"` |
 
-### ✍️ Editors
+### Editors
 
 | App | File | Install |
 |-----|------|---------|
@@ -65,7 +64,7 @@ truth is **[`palette/cirno.json`](palette/cirno.json)**.
 | **Vim** | [`themes/vim/colors/cirno.vim`](themes/vim/colors/cirno.vim) | copy to `~/.vim/colors/`, then `colorscheme cirno` |
 | **Helix** | [`themes/helix/cirno.toml`](themes/helix/cirno.toml) | copy to `~/.config/helix/themes/`, set `theme = "cirno"` |
 
-### 🌃 Desktop (Wayland)
+### Desktop (Wayland)
 
 | App | File | Install |
 |-----|------|---------|
@@ -79,7 +78,7 @@ truth is **[`palette/cirno.json`](palette/cirno.json)**.
 | **swaylock** | [`themes/swaylock/cirno.conf`](themes/swaylock/cirno.conf) | copy to `~/.config/swaylock/config` |
 | **GTK / libadwaita** | [`themes/gtk/`](themes/gtk/) | copy into `~/.config/gtk-4.0/` (and `gtk-3.0/`) |
 
-### 🐚 Shell & prompt
+### Shell & prompt
 
 | App | File | Install |
 |-----|------|---------|
@@ -88,7 +87,7 @@ truth is **[`palette/cirno.json`](palette/cirno.json)**.
 | **zsh** | [`themes/zsh/cirno.zsh`](themes/zsh/cirno.zsh) | `source` after `zsh-syntax-highlighting` |
 | **fzf** | [`themes/fzf/`](themes/fzf/) | `source` the file for your shell (`.sh` / `.zsh` / `.fish`) |
 
-### 🔧 CLI tools
+### CLI tools
 
 | App | File | Install |
 |-----|------|---------|
