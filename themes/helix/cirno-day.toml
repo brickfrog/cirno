@@ -1,0 +1,223 @@
+# Cirno Day — the light ice-fairy theme for Helix.
+# Bright frost-blue paper, deep navy ink, and one red ribbon. From Touhou's Cirno.
+# https://github.com/brickfrog/cirno
+
+# ============================== Editor UI ==============================
+"ui.background" = { fg = "text", bg = "base" }
+"ui.background.separator" = { fg = "surface1" }
+"ui.text" = { fg = "text" }
+"ui.text.focus" = { fg = "text", modifiers = ["bold"] }
+"ui.text.inactive" = { fg = "overlay1" }
+"ui.text.info" = { fg = "subtext1" }
+"ui.window" = { fg = "surface2" }
+
+"ui.cursor" = { fg = "base", bg = "subtext0" }
+"ui.cursor.primary" = { fg = "base", bg = "ice" }
+"ui.cursor.match" = { fg = "ice", bg = "surface2", modifiers = ["bold"] }
+"ui.cursor.primary.normal" = { fg = "base", bg = "ice" }
+"ui.cursor.primary.insert" = { fg = "base", bg = "mint" }
+"ui.cursor.primary.select" = { fg = "base", bg = "mauve" }
+"ui.cursor.normal" = { fg = "base", bg = "subtext0" }
+"ui.cursor.insert" = { fg = "base", bg = "mint" }
+"ui.cursor.select" = { fg = "base", bg = "mauve" }
+
+"ui.cursorline" = { bg = "surface0" }
+"ui.cursorline.primary" = { bg = "surface0" }
+"ui.cursorline.secondary" = { bg = "surface0" }
+"ui.cursorcolumn.primary" = { bg = "surface0" }
+"ui.cursorcolumn.secondary" = { bg = "surface0" }
+
+"ui.linenr" = { fg = "overlay0" }
+"ui.linenr.selected" = { fg = "ice", modifiers = ["bold"] }
+
+"ui.statusline" = { fg = "subtext1", bg = "mantle" }
+"ui.statusline.inactive" = { fg = "overlay1", bg = "mantle" }
+"ui.statusline.normal" = { fg = "base", bg = "ice", modifiers = ["bold"] }
+"ui.statusline.insert" = { fg = "base", bg = "mint", modifiers = ["bold"] }
+"ui.statusline.select" = { fg = "base", bg = "mauve", modifiers = ["bold"] }
+"ui.statusline.separator" = { fg = "surface2" }
+
+"ui.popup" = { fg = "text", bg = "mantle" }
+"ui.popup.info" = { fg = "subtext1", bg = "mantle" }
+"ui.help" = { fg = "text", bg = "mantle" }
+
+"ui.menu" = { fg = "subtext1", bg = "surface0" }
+"ui.menu.selected" = { fg = "text", bg = "surface2", modifiers = ["bold"] }
+"ui.menu.scroll" = { fg = "overlay0", bg = "surface0" }
+
+"ui.selection" = { bg = "surface2" }
+"ui.selection.primary" = { bg = "surface2" }
+
+"ui.virtual" = { fg = "overlay0" }
+"ui.virtual.whitespace" = { fg = "surface2" }
+"ui.virtual.indent-guide" = { fg = "surface1" }
+"ui.virtual.ruler" = { bg = "surface0" }
+"ui.virtual.inlay-hint" = { fg = "overlay1", bg = "surface0" }
+"ui.virtual.jump-label" = { fg = "base", bg = "ribbon", modifiers = ["bold"] }
+"ui.virtual.wrap" = { fg = "overlay0" }
+
+"ui.bufferline" = { fg = "subtext0", bg = "mantle" }
+"ui.bufferline.active" = { fg = "ice", bg = "base", modifiers = ["bold"] }
+"ui.bufferline.background" = { bg = "crust" }
+
+"ui.gutter" = { bg = "base" }
+"ui.gutter.selected" = { bg = "surface0" }
+"ui.highlight" = { bg = "surface1" }
+"ui.highlight.frameline" = { bg = "surface1" }
+"ui.debug.breakpoint" = { fg = "ribbon" }
+"ui.debug.active" = { fg = "gold" }
+
+# ============================== Syntax ==============================
+"comment" = { fg = "comment", modifiers = ["italic"] }
+"comment.line" = { fg = "comment", modifiers = ["italic"] }
+"comment.block" = { fg = "comment", modifiers = ["italic"] }
+"comment.block.documentation" = { fg = "comment", modifiers = ["italic"] }
+
+"keyword" = "mauve"
+"keyword.control" = "mauve"
+"keyword.control.conditional" = "mauve"
+"keyword.control.repeat" = "mauve"
+"keyword.control.import" = "teal"
+"keyword.control.return" = "mauve"
+"keyword.control.exception" = "mauve"
+"keyword.operator" = "mauve"
+"keyword.directive" = "teal"
+"keyword.function" = "mauve"
+"keyword.storage" = "mauve"
+"keyword.storage.type" = "mauve"
+"keyword.storage.modifier" = "mauve"
+
+"function" = "ice"
+"function.builtin" = "ice"
+"function.method" = "ice"
+"function.macro" = "teal"
+"function.special" = "teal"
+
+"type" = "gold"
+"type.builtin" = { fg = "gold", modifiers = ["italic"] }
+"type.parameter" = { fg = "gold", modifiers = ["italic"] }
+"type.enum" = "gold"
+"type.enum.variant" = "peach"
+
+"constructor" = "ice"
+
+"constant" = "peach"
+"constant.builtin" = "peach"
+"constant.builtin.boolean" = "peach"
+"constant.numeric" = "peach"
+"constant.numeric.integer" = "peach"
+"constant.numeric.float" = "peach"
+"constant.character" = "mint"
+"constant.character.escape" = "frost"
+
+"string" = "mint"
+"string.regexp" = "spring"
+"string.special" = "frost"
+"string.special.path" = "frost"
+"string.special.url" = { fg = "sapphire", underline = { style = "line" } }
+"string.special.symbol" = "peach"
+
+"operator" = "sky"
+
+"variable" = "text"
+"variable.parameter" = "periwinkle"
+"variable.builtin" = { fg = "teal", modifiers = ["italic"] }
+"variable.other" = "text"
+"variable.other.member" = "sky"
+
+"label" = "sky"
+
+"namespace" = "teal"
+
+"punctuation" = "subtext0"
+"punctuation.delimiter" = "subtext0"
+"punctuation.bracket" = "subtext0"
+"punctuation.special" = "frost"
+
+"tag" = "ribbon"
+"tag.builtin" = "ribbon"
+
+"attribute" = "gold"
+
+"special" = "frost"
+
+# ============================== Markup ==============================
+"markup.heading" = { fg = "ice", modifiers = ["bold"] }
+"markup.heading.marker" = { fg = "overlay0" }
+"markup.heading.1" = { fg = "ice", modifiers = ["bold"] }
+"markup.heading.2" = { fg = "cyan", modifiers = ["bold"] }
+"markup.heading.3" = { fg = "sky", modifiers = ["bold"] }
+"markup.heading.4" = { fg = "teal", modifiers = ["bold"] }
+"markup.heading.5" = { fg = "mauve", modifiers = ["bold"] }
+"markup.heading.6" = { fg = "periwinkle", modifiers = ["bold"] }
+"markup.bold" = { fg = "peach", modifiers = ["bold"] }
+"markup.italic" = { fg = "mauve", modifiers = ["italic"] }
+"markup.strikethrough" = { fg = "overlay1", modifiers = ["crossed_out"] }
+"markup.link" = { fg = "sapphire" }
+"markup.link.url" = { fg = "sapphire", underline = { style = "line" } }
+"markup.link.label" = "ice"
+"markup.link.text" = "ice"
+"markup.raw" = "mint"
+"markup.raw.inline" = "mint"
+"markup.raw.block" = "subtext1"
+"markup.list" = "ice"
+"markup.list.numbered" = "ice"
+"markup.list.unnumbered" = "ice"
+"markup.list.checked" = "mint"
+"markup.list.unchecked" = "overlay1"
+"markup.quote" = { fg = "subtext0", modifiers = ["italic"] }
+
+# ============================== Diff ==============================
+"diff.plus" = "mint"
+"diff.minus" = "ribbon"
+"diff.delta" = "gold"
+"diff.delta.moved" = "sky"
+
+# ============================== Diagnostics ==============================
+"diagnostic" = { underline = { color = "subtext0", style = "curl" } }
+"diagnostic.error" = { underline = { color = "ribbon", style = "curl" } }
+"diagnostic.warning" = { underline = { color = "gold", style = "curl" } }
+"diagnostic.info" = { underline = { color = "sky", style = "curl" } }
+"diagnostic.hint" = { underline = { color = "teal", style = "curl" } }
+"diagnostic.unnecessary" = { fg = "overlay1", modifiers = ["dim"] }
+"diagnostic.deprecated" = { modifiers = ["crossed_out"] }
+
+"error" = "ribbon"
+"warning" = "gold"
+"info" = "sky"
+"hint" = "teal"
+
+# ============================== Palette ==============================
+[palette]
+# backgrounds
+crust    = "#c3d2e6"
+mantle   = "#d7e3f1"
+base     = "#eef4fb"
+surface0 = "#e2ebf6"
+surface1 = "#d2deee"
+surface2 = "#bccde4"
+overlay0 = "#90a3c0"
+overlay1 = "#7388a8"
+overlay2 = "#5d7295"
+# foregrounds
+text     = "#16233d"
+subtext1 = "#283955"
+subtext0 = "#3c4d6c"
+comment  = "#6c7f9f"
+# accents
+ice        = "#0c6f93"
+frost      = "#0d7193"
+cyan       = "#0c7799"
+teal       = "#0c7d74"
+sky        = "#2d6fc4"
+blue       = "#2f5fcf"
+sapphire   = "#11688f"
+periwinkle = "#5163b8"
+mauve      = "#8a4fc0"
+ribbon     = "#c4243f"
+flare      = "#a81049"
+peach      = "#9e4f17"
+gold       = "#835f08"
+cream      = "#6f5000"
+mint       = "#0f7e51"
+spring     = "#0c7e50"

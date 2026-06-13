@@ -1,0 +1,221 @@
+/*
+ * Cirno — Touhou ice-fairy Waybar theme
+ * https://github.com/brickfrog/cirno
+ * Install: copy to ~/.config/waybar/style.css (or @import it from your style.css)
+ */
+
+/* ── Palette ───────────────────────────────────────────────────────── */
+@define-color base       #0e1525;
+@define-color mantle     #0a1120;
+@define-color crust      #070c18;
+@define-color surface0   #16203a;
+@define-color surface1   #1f2c4a;
+@define-color surface2   #2b3c60;
+@define-color overlay0   #3d5277;
+@define-color overlay1   #536b91;
+@define-color overlay2   #6a82a8;
+@define-color text       #d4e4f5;
+@define-color subtext1   #bdcfe6;
+@define-color subtext0   #a3b6d2;
+@define-color comment    #5f7299;
+@define-color ice        #7ad6f0;
+@define-color frost      #ace6f7;
+@define-color cyan       #4cc6ea;
+@define-color teal       #5fccc6;
+@define-color sky        #6fb2ee;
+@define-color blue       #5b90e4;
+@define-color sapphire   #3aa9dd;
+@define-color periwinkle #9fb6f2;
+@define-color mauve      #b78ee2;
+@define-color ribbon     #ec5a72;
+@define-color flare      #f4849a;
+@define-color peach      #eca06a;
+@define-color gold       #e8cd86;
+@define-color cream      #f2dda0;
+@define-color mint       #84ddb2;
+@define-color spring     #a4ebc8;
+
+/* ── Base reset ────────────────────────────────────────────────────── */
+* {
+    font-family: "JetBrainsMono Nerd Font", "Noto Sans", sans-serif;
+    font-size: 13px;
+    min-height: 0;
+    border: none;
+    border-radius: 0;
+}
+
+/* ── The bar ───────────────────────────────────────────────────────── */
+window#waybar {
+    background: @mantle;
+    color: @text;
+    border-bottom: 2px solid @surface0;
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+/* Shared module look: rounded pills with breathing room */
+#workspaces,
+#clock,
+#cpu,
+#memory,
+#temperature,
+#battery,
+#network,
+#pulseaudio,
+#tray,
+#custom-power {
+    background: @surface0;
+    color: @text;
+    padding: 0 12px;
+    margin: 4px 3px;
+    border-radius: 10px;
+}
+
+/* ── Workspaces ────────────────────────────────────────────────────── */
+#workspaces {
+    padding: 0 4px;
+    margin-left: 6px;
+}
+
+#workspaces button {
+    color: @subtext0;
+    background: transparent;
+    padding: 0 8px;
+    margin: 4px 2px;
+    border-radius: 8px;
+    border-bottom: 2px solid transparent;
+}
+
+#workspaces button:hover {
+    color: @text;
+    background: @surface1;
+    border-bottom: 2px solid @overlay1;
+}
+
+#workspaces button.active {
+    color: @base;
+    background: @ice;
+    border-bottom: 2px solid @frost;
+}
+
+#workspaces button.urgent {
+    color: @base;
+    background: @ribbon;
+    border-bottom: 2px solid @flare;
+}
+
+/* ── Clock ─────────────────────────────────────────────────────────── */
+#clock {
+    color: @frost;
+    font-weight: bold;
+}
+
+/* ── CPU / Memory ──────────────────────────────────────────────────── */
+#cpu {
+    color: @sky;
+}
+
+#memory {
+    color: @periwinkle;
+}
+
+/* ── Temperature ───────────────────────────────────────────────────── */
+#temperature {
+    color: @gold;
+}
+
+#temperature.critical {
+    color: @base;
+    background: @ribbon;
+}
+
+/* ── Battery ───────────────────────────────────────────────────────── */
+#battery {
+    color: @mint;
+}
+
+#battery.charging,
+#battery.plugged {
+    color: @base;
+    background: @mint;
+}
+
+#battery.warning:not(.charging) {
+    color: @base;
+    background: @gold;
+}
+
+#battery.critical:not(.charging) {
+    color: @base;
+    background: @ribbon;
+    animation-name: blink;
+    animation-duration: 0.8s;
+    animation-timing-function: steps(12);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes blink {
+    to {
+        color: @ribbon;
+        background: @base;
+    }
+}
+
+/* ── Network ───────────────────────────────────────────────────────── */
+#network {
+    color: @teal;
+}
+
+#network.disconnected {
+    color: @ribbon;
+}
+
+/* ── Audio ─────────────────────────────────────────────────────────── */
+#pulseaudio {
+    color: @sapphire;
+}
+
+#pulseaudio.muted {
+    color: @comment;
+}
+
+/* ── Tray ──────────────────────────────────────────────────────────── */
+#tray {
+    background: @surface0;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    background: @ribbon;
+}
+
+/* ── Power ─────────────────────────────────────────────────────────── */
+#custom-power {
+    color: @ribbon;
+    margin-right: 6px;
+    padding: 0 14px;
+}
+
+#custom-power:hover {
+    color: @base;
+    background: @ribbon;
+}
+
+/* Tooltips */
+tooltip {
+    background: @crust;
+    border: 1px solid @ice;
+    border-radius: 8px;
+}
+
+tooltip label {
+    color: @text;
+    padding: 2px;
+}

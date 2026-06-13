@@ -1,0 +1,39 @@
+/*
+ * Cirno — Touhou ice-fairy GTK 4 / libadwaita theme
+ * https://github.com/brickfrog/cirno
+ * Install: copy gtk.css and colors.css to ~/.config/gtk-4.0/
+ */
+
+@import url("colors.css");
+
+/* A couple of light, tasteful tweaks on top of the palette. */
+
+/* Slightly rounder, frost-tinted selection. */
+window {
+    background-color: @window_bg_color;
+    color: @window_fg_color;
+}
+
+/* Keep selected text legible on the ice accent. */
+selection {
+    background-color: @accent_bg_color;
+    color: @accent_fg_color;
+}
+
+/* Gentle ice focus ring instead of the default heavy blue. */
+*:focus-visible {
+    outline-color: @ice;
+    outline-width: 2px;
+    outline-style: solid;
+}
+
+/* Rounded cards/popovers for the soft ice-fairy look. */
+.card,
+popover > contents {
+    border-radius: 12px;
+}
+
+/* Headerbar sits flush on the mantle with a faint frost underline. */
+headerbar {
+    box-shadow: inset 0 -1px 0 0 @surface0;
+}

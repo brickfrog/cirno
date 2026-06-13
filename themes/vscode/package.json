@@ -1,0 +1,30 @@
+{
+  "name": "cirno",
+  "displayName": "Cirno",
+  "description": "An ice-fairy theme — midnight navy, starlight blue, ice-cyan, and one red ribbon. From Touhou's Cirno.",
+  "version": "1.0.0",
+  "publisher": "brickfrog",
+  "license": "MIT",
+  "icon": "icon.png",
+  "engines": { "vscode": "^1.70.0" },
+  "categories": ["Themes"],
+  "keywords": ["cirno", "touhou", "blue", "dark", "ice", "color-theme"],
+  "galleryBanner": { "color": "#0e1525", "theme": "dark" },
+  "repository": { "type": "git", "url": "https://github.com/brickfrog/cirno.git" },
+  "bugs": { "url": "https://github.com/brickfrog/cirno/issues" },
+  "homepage": "https://github.com/brickfrog/cirno#readme",
+  "contributes": {
+    "themes": [
+      {
+        "label": "Cirno",
+        "uiTheme": "vs-dark",
+        "path": "./themes/cirno-color-theme.json"
+      },
+      {
+        "label": "Cirno Day",
+        "uiTheme": "vs",
+        "path": "./themes/cirno-day-color-theme.json"
+      }
+    ]
+  }
+}

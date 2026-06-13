@@ -1,0 +1,51 @@
+# Cirno Day - a Touhou ice-fairy theme (light)
+# https://github.com/brickfrog/cirno
+# Install: copy to ~/.config/alacritty/ and add to alacritty.toml: [general] import = ["cirno-day.toml"]
+
+[colors.primary]
+background = "#eef4fb"
+foreground = "#16233d"
+
+[colors.cursor]
+text   = "#eef4fb"
+cursor = "#0c6f93"
+
+[colors.selection]
+text       = "#16233d"
+background = "#bccde4"
+
+[colors.search.matches]
+foreground = "#eef4fb"
+background = "#835f08"
+
+[colors.search.focused_match]
+foreground = "#eef4fb"
+background = "#0c6f93"
+
+[colors.hints.start]
+foreground = "#eef4fb"
+background = "#835f08"
+
+[colors.hints.end]
+foreground = "#eef4fb"
+background = "#0c6f93"
+
+[colors.normal]
+black   = "#d2deee"
+red     = "#c4243f"
+green   = "#0f7e51"
+yellow  = "#835f08"
+blue    = "#2f5fcf"
+magenta = "#8a4fc0"
+cyan    = "#0c6f93"
+white   = "#3c4d6c"
+
+[colors.bright]
+black   = "#90a3c0"
+red     = "#a81049"
+green   = "#0c7e50"
+yellow  = "#6f5000"
+blue    = "#2d6fc4"
+magenta = "#5163b8"
+cyan    = "#0d7193"
+white   = "#16233d"

@@ -1,0 +1,43 @@
+# Cirno - lazygit theme
+# https://github.com/justinvc/cirno
+# Install: merge this `gui:` block into ~/.config/lazygit/config.yml
+#          (lazygit uses hex colors; 256-color terminals fall back gracefully)
+# Touhou ice-fairy palette: midnight navy, starlight blue, ice-cyan, one red ribbon.
+
+gui:
+  theme:
+    activeBorderColor:
+      - "#7ad6f0"
+      - bold
+    inactiveBorderColor:
+      - "#3d5277"
+    searchingActiveBorderColor:
+      - "#e8cd86"
+      - bold
+    optionsTextColor:
+      - "#6fb2ee"
+    selectedLineBgColor:
+      - "#1f2c4a"
+    selectedRangeBgColor:
+      - "#1f2c4a"
+    cherryPickedCommitFgColor:
+      - "#0e1525"
+    cherryPickedCommitBgColor:
+      - "#b78ee2"
+    markedBaseCommitFgColor:
+      - "#0e1525"
+    markedBaseCommitBgColor:
+      - "#e8cd86"
+    unstagedChangesColor:
+      - "#ec5a72"
+    defaultFgColor:
+      - "#d4e4f5"
+  authorColors:
+    "*": "#9fb6f2"
+  branchColors:
+    main: "#ec5a72"
+    master: "#ec5a72"
+    develop: "#e8cd86"
+    "feature/*": "#84ddb2"
+    "fix/*": "#f4849a"
+    "release/*": "#b78ee2"

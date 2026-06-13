@@ -1,0 +1,71 @@
+# Cirno - btop++ theme
+# https://github.com/brickfrog/cirno
+# Install: cp cirno.theme ~/.config/btop/themes/  then set color_theme="cirno" in btop.conf
+#          (or press Esc -> Options -> color_theme inside btop)
+# Touhou ice-fairy palette: midnight navy, starlight blue, ice-cyan, one red ribbon.
+#
+# Gradients flow through the palette: cool = ice, hot/critical = ribbon.
+
+# --- base colors -------------------------------------------------------------
+theme[main_bg]="#0e1525"
+theme[main_fg]="#d4e4f5"
+theme[title]="#bdcfe6"
+theme[hi_fg]="#7ad6f0"
+theme[selected_bg]="#1f2c4a"
+theme[selected_fg]="#7ad6f0"
+theme[inactive_fg]="#3d5277"
+theme[graph_text]="#a3b6d2"
+theme[meter_bg]="#16203a"
+theme[proc_misc]="#84ddb2"
+
+# --- boxes -------------------------------------------------------------------
+theme[cpu_box]="#3d5277"
+theme[mem_box]="#3d5277"
+theme[net_box]="#3d5277"
+theme[proc_box]="#3d5277"
+theme[div_line]="#1f2c4a"
+
+# --- temperature gradient (ice -> gold -> ribbon) ----------------------------
+theme[temp_start]="#7ad6f0"
+theme[temp_mid]="#e8cd86"
+theme[temp_end]="#ec5a72"
+
+# --- cpu usage gradient (mint -> ice -> ribbon) ------------------------------
+theme[cpu_start]="#84ddb2"
+theme[cpu_mid]="#7ad6f0"
+theme[cpu_end]="#ec5a72"
+
+# --- free memory gradient (deep frost -> spring) -----------------------------
+theme[free_start]="#3aa9dd"
+theme[free_mid]="#5fccc6"
+theme[free_end]="#a4ebc8"
+
+# --- cached memory gradient (sapphire -> ice -> frost) -----------------------
+theme[cached_start]="#3aa9dd"
+theme[cached_mid]="#5fccc6"
+theme[cached_end]="#ace6f7"
+
+# --- available memory gradient (blue -> sky -> periwinkle) -------------------
+theme[available_start]="#5b90e4"
+theme[available_mid]="#6fb2ee"
+theme[available_end]="#9fb6f2"
+
+# --- used memory gradient (ice -> mauve -> ribbon) ---------------------------
+theme[used_start]="#7ad6f0"
+theme[used_mid]="#b78ee2"
+theme[used_end]="#ec5a72"
+
+# --- download gradient (teal -> ice -> frost) --------------------------------
+theme[download_start]="#5fccc6"
+theme[download_mid]="#4cc6ea"
+theme[download_end]="#ace6f7"
+
+# --- upload gradient (sky -> periwinkle -> mauve) ----------------------------
+theme[upload_start]="#6fb2ee"
+theme[upload_mid]="#9fb6f2"
+theme[upload_end]="#b78ee2"
+
+# --- process gradient (comment -> ice -> frost) ------------------------------
+theme[process_start]="#5f7299"
+theme[process_mid]="#7ad6f0"
+theme[process_end]="#ace6f7"

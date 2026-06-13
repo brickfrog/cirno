@@ -1,0 +1,19 @@
+# claude code session-local settings
+.claude/
+
+# editors / os
+.DS_Store
+*.swp
+*~
+.idea/
+.vscode/
+!themes/vscode/
+
+# python
+__pycache__/
+*.pyc
+.venv/
+
+# vscode extension build artifacts
+themes/vscode/*.vsix
+themes/vscode/node_modules/

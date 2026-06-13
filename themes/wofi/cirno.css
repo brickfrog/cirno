@@ -1,0 +1,81 @@
+/*
+ * Cirno — Touhou ice-fairy Wofi theme
+ * https://github.com/brickfrog/cirno
+ * Install: copy to ~/.config/wofi/style.css (wofi --show drun)
+ */
+
+window {
+    margin: 0;
+    background-color: #0e1525;
+    color: #d4e4f5;
+    border: 2px solid #7ad6f0;
+    border-radius: 14px;
+    font-family: "JetBrainsMono Nerd Font", "Noto Sans", sans-serif;
+    font-size: 14px;
+}
+
+#outer-box {
+    margin: 12px;
+    padding: 4px;
+    border: none;
+    background-color: transparent;
+}
+
+#input {
+    margin: 4px;
+    padding: 10px 14px;
+    border: 1px solid #2b3c60;
+    border-radius: 10px;
+    background-color: #16203a;
+    color: #d4e4f5;
+}
+
+#input:focus {
+    border: 1px solid #7ad6f0;
+}
+
+#input image {
+    color: #7ad6f0;
+}
+
+#scroll {
+    margin-top: 8px;
+    border: none;
+    background-color: transparent;
+}
+
+#inner-box {
+    margin: 0;
+    padding: 2px;
+    border: none;
+    background-color: transparent;
+}
+
+#img {
+    margin-right: 10px;
+}
+
+#text {
+    margin: 0;
+    color: #d4e4f5;
+}
+
+#entry {
+    padding: 8px 12px;
+    margin: 2px 4px;
+    border-radius: 10px;
+    background-color: transparent;
+}
+
+#entry:hover {
+    background-color: #1f2c4a;
+}
+
+#entry:selected {
+    background-color: #7ad6f0;
+}
+
+#entry:selected #text {
+    color: #0e1525;
+    font-weight: bold;
+}

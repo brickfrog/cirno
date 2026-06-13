@@ -1,0 +1,138 @@
+// Cirno Day - a Touhou ice-fairy theme (light)
+// https://github.com/brickfrog/cirno
+// Install: copy to ~/.config/zellij/themes/ then set `theme "cirno-day"` in config.kdl
+
+themes {
+    cirno-day {
+        // classic named-color form (widely supported)
+        fg "#16233d"
+        bg "#eef4fb"
+        black "#d2deee"
+        red "#c4243f"
+        green "#0f7e51"
+        yellow "#835f08"
+        blue "#2f5fcf"
+        magenta "#8a4fc0"
+        cyan "#0c6f93"
+        white "#3c4d6c"
+        orange "#835f08"
+
+        // newer UI-component spec
+        text_unselected {
+            base "#16233d"
+            background "#eef4fb"
+            emphasis_0 "#0c6f93"
+            emphasis_1 "#835f08"
+            emphasis_2 "#0f7e51"
+            emphasis_3 "#8a4fc0"
+        }
+        text_selected {
+            base "#16233d"
+            background "#bccde4"
+            emphasis_0 "#0c6f93"
+            emphasis_1 "#835f08"
+            emphasis_2 "#0f7e51"
+            emphasis_3 "#8a4fc0"
+        }
+        ribbon_selected {
+            base "#eef4fb"
+            background "#0c6f93"
+            emphasis_0 "#c4243f"
+            emphasis_1 "#835f08"
+            emphasis_2 "#8a4fc0"
+            emphasis_3 "#2f5fcf"
+        }
+        ribbon_unselected {
+            base "#16233d"
+            background "#d2deee"
+            emphasis_0 "#c4243f"
+            emphasis_1 "#eef4fb"
+            emphasis_2 "#0f7e51"
+            emphasis_3 "#8a4fc0"
+        }
+        table_title {
+            base "#0c6f93"
+            background "#eef4fb"
+            emphasis_0 "#835f08"
+            emphasis_1 "#0f7e51"
+            emphasis_2 "#8a4fc0"
+            emphasis_3 "#2f5fcf"
+        }
+        table_cell_selected {
+            base "#16233d"
+            background "#bccde4"
+            emphasis_0 "#0c6f93"
+            emphasis_1 "#835f08"
+            emphasis_2 "#0f7e51"
+            emphasis_3 "#8a4fc0"
+        }
+        table_cell_unselected {
+            base "#16233d"
+            background "#eef4fb"
+            emphasis_0 "#0c6f93"
+            emphasis_1 "#835f08"
+            emphasis_2 "#0f7e51"
+            emphasis_3 "#8a4fc0"
+        }
+        list_selected {
+            base "#16233d"
+            background "#bccde4"
+            emphasis_0 "#0c6f93"
+            emphasis_1 "#835f08"
+            emphasis_2 "#0f7e51"
+            emphasis_3 "#8a4fc0"
+        }
+        list_unselected {
+            base "#16233d"
+            background "#eef4fb"
+            emphasis_0 "#0c6f93"
+            emphasis_1 "#835f08"
+            emphasis_2 "#0f7e51"
+            emphasis_3 "#8a4fc0"
+        }
+        frame_selected {
+            base "#0c6f93"
+            background "#eef4fb"
+            emphasis_0 "#835f08"
+            emphasis_1 "#0f7e51"
+            emphasis_2 "#8a4fc0"
+            emphasis_3 "#2f5fcf"
+        }
+        frame_highlight {
+            base "#835f08"
+            background "#eef4fb"
+            emphasis_0 "#0c6f93"
+            emphasis_1 "#c4243f"
+            emphasis_2 "#0f7e51"
+            emphasis_3 "#8a4fc0"
+        }
+        exit_code_success {
+            base "#0f7e51"
+            background "#eef4fb"
+            emphasis_0 "#0c6f93"
+            emphasis_1 "#835f08"
+            emphasis_2 "#8a4fc0"
+            emphasis_3 "#2f5fcf"
+        }
+        exit_code_error {
+            base "#c4243f"
+            background "#eef4fb"
+            emphasis_0 "#a81049"
+            emphasis_1 "#835f08"
+            emphasis_2 "#0f7e51"
+            emphasis_3 "#8a4fc0"
+        }
+        multiplayer_user_colors {
+            player_1 "#0c6f93"
+            player_2 "#8a4fc0"
+            player_3 "#0f7e51"
+            player_4 "#835f08"
+            player_5 "#2f5fcf"
+            player_6 "#c4243f"
+            player_7 "#5163b8"
+            player_8 "#2d6fc4"
+            player_9 "#0d7193"
+            player_10 "#0c7e50"
+        }
+    }
+}

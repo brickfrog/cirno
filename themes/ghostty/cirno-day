@@ -1,0 +1,41 @@
+# Cirno Day — the light variant. Fresh snow at high noon.
+# https://github.com/brickfrog/cirno
+#
+# Install:  copy this file to  ~/.config/ghostty/themes/cirno-day
+# Use:      theme = cirno-day   (or  theme = light:cirno-day,dark:cirno)
+
+background = #eef4fb
+foreground = #16233d
+
+cursor-color = #0c6f93
+cursor-text  = #eef4fb
+
+selection-background = #d2deee
+selection-foreground = #16233d
+
+search-background          = #d2deee
+search-foreground          = #16233d
+search-selected-background = #c4243f
+search-selected-foreground = #eef4fb
+
+split-divider-color  = #d2deee
+unfocused-split-fill = #d7e3f1
+
+# normal
+palette = 0=#d2deee
+palette = 1=#c4243f
+palette = 2=#0f7e51
+palette = 3=#835f08
+palette = 4=#2f5fcf
+palette = 5=#8a4fc0
+palette = 6=#0c6f93
+palette = 7=#3c4d6c
+# bright
+palette = 8=#90a3c0
+palette = 9=#a81049
+palette = 10=#0c7e50
+palette = 11=#6f5000
+palette = 12=#2d6fc4
+palette = 13=#5163b8
+palette = 14=#0d7193
+palette = 15=#16233d

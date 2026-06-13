@@ -1,0 +1,85 @@
+# Cirno - delta (git-delta) theme
+# https://github.com/brickfrog/cirno
+# Install: copy into ~/.gitconfig, or include it from your global config:
+#
+#   [include]
+#       path = /path/to/themes/delta/cirno.gitconfig
+#
+# Requires git-delta (https://github.com/dandavison/delta) and the Cirno bat
+# theme installed (themes/bat/Cirno.tmTheme) for matching syntax highlighting.
+# Touhou ice-fairy palette: midnight navy, starlight blue, ice-cyan, one red ribbon.
+
+[core]
+	pager = delta
+
+[interactive]
+	diffFilter = delta --color-only
+
+[delta]
+	# Use the Cirno syntax theme for highlighted code in diffs.
+	syntax-theme = Cirno
+
+	features = cirno
+	navigate = true
+	line-numbers = true
+	side-by-side = false
+	hyperlinks = true
+	true-color = always
+	tabs = 4
+
+[delta "cirno"]
+	# --- removed lines (ribbon tints) ---
+	minus-style                   = syntax "#2a1622"
+	minus-emph-style              = "#d4e4f5" "#5a2230"
+	minus-non-emph-style          = syntax "#2a1622"
+	minus-empty-line-marker-style = normal "#2a1622"
+
+	# --- added lines (mint tints) ---
+	plus-style                    = syntax "#102a20"
+	plus-emph-style               = "#0e1525" "#2f6a4d"
+	plus-non-emph-style           = syntax "#102a20"
+	plus-empty-line-marker-style  = normal "#102a20"
+
+	# --- whitespace / zero ---
+	whitespace-error-style        = "#0e1525" "#ec5a72"
+	zero-style                    = syntax
+
+	# --- file + hunk headers ---
+	file-style                    = "#7ad6f0" bold
+	file-decoration-style         = "#3d5277" ul
+	file-added-label              = [+]
+	file-modified-label           = [~]
+	file-removed-label            = [-]
+	file-renamed-label            = [»]
+
+	hunk-header-style             = "#7ad6f0" bold
+	hunk-header-decoration-style  = "#3d5277" box
+	hunk-header-file-style        = "#bdcfe6"
+	hunk-header-line-number-style = "#e8cd86"
+
+	# --- line numbers ---
+	line-numbers                       = true
+	line-numbers-left-style            = "#3d5277"
+	line-numbers-right-style           = "#3d5277"
+	line-numbers-minus-style           = "#ec5a72"
+	line-numbers-plus-style            = "#84ddb2"
+	line-numbers-zero-style            = "#536b91"
+	line-numbers-left-format           = "{nm:>4}│"
+	line-numbers-right-format          = "{np:>4}│"
+
+	# --- decorations / chrome ---
+	blame-palette                 = "#0e1525" "#16203a" "#1f2c4a" "#2b3c60"
+	blame-code-style              = syntax
+	blame-format                  = "{author:<18} {commit:>8} {timestamp:>16}"
+
+	merge-conflict-begin-symbol   = ▼
+	merge-conflict-end-symbol     = ▲
+	merge-conflict-ours-diff-header-style          = "#e8cd86" bold
+	merge-conflict-ours-diff-header-decoration-style  = "#3d5277" box
+	merge-conflict-theirs-diff-header-style        = "#6fb2ee" bold
+	merge-conflict-theirs-diff-header-decoration-style = "#3d5277" box
+
+	map-styles = bold purple => syntax "#1f2c4a", bold cyan => syntax "#16203a"
+
+[delta "interactive"]
+	keep-plus-minus-markers = false

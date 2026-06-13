@@ -1,0 +1,150 @@
+# Cirno - yazi flavor / theme
+# https://github.com/brickfrog/cirno
+# Install: copy to ~/.config/yazi/theme.toml  (or use as a flavor's flavor.toml)
+# Touhou ice-fairy palette: midnight navy, starlight blue, ice-cyan, one red ribbon.
+
+# Newer yazi (>= 0.4) renamed the [manager] table to [mgr]. If your yazi is older
+# and ignores the styling below, rename this table from [mgr] back to [manager].
+
+[mgr]
+cwd = { fg = "#7ad6f0" }
+
+# hovered
+hovered         = { fg = "#d4e4f5", bg = "#1f2c4a" }
+preview_hovered = { underline = true }
+
+# find
+find_keyword  = { fg = "#e8cd86", bold = true, italic = true }
+find_position = { fg = "#b78ee2", bg = "reset", bold = true, italic = true }
+
+# marker
+marker_copied   = { fg = "#84ddb2", bg = "#84ddb2" }
+marker_cut      = { fg = "#ec5a72", bg = "#ec5a72" }
+marker_marked   = { fg = "#7ad6f0", bg = "#7ad6f0" }
+marker_selected = { fg = "#e8cd86", bg = "#e8cd86" }
+
+# count
+count_copied   = { fg = "#0e1525", bg = "#84ddb2" }
+count_cut      = { fg = "#0e1525", bg = "#ec5a72" }
+count_selected = { fg = "#0e1525", bg = "#e8cd86" }
+
+# border
+border_symbol = "│"
+border_style  = { fg = "#3d5277" }
+
+[mode]
+normal_main = { fg = "#0e1525", bg = "#7ad6f0", bold = true }
+normal_alt  = { fg = "#7ad6f0", bg = "#16203a", bold = true }
+select_main = { fg = "#0e1525", bg = "#b78ee2", bold = true }
+select_alt  = { fg = "#b78ee2", bg = "#16203a", bold = true }
+unset_main  = { fg = "#0e1525", bg = "#ec5a72", bold = true }
+unset_alt   = { fg = "#ec5a72", bg = "#16203a", bold = true }
+
+[status]
+# the bar separators
+separator_open  = ""
+separator_close = ""
+separator_style = { fg = "#16203a", bg = "#16203a" }
+
+# progress
+progress_label  = { fg = "#d4e4f5", bold = true }
+progress_normal = { fg = "#7ad6f0", bg = "#16203a" }
+progress_error  = { fg = "#ec5a72", bg = "#16203a" }
+
+# permissions
+perm_type  = { fg = "#7ad6f0" }
+perm_read  = { fg = "#e8cd86" }
+perm_write = { fg = "#ec5a72" }
+perm_exec  = { fg = "#84ddb2" }
+perm_sep   = { fg = "#5f7299" }
+
+[input]
+border   = { fg = "#7ad6f0" }
+title    = { fg = "#d4e4f5" }
+value    = { fg = "#d4e4f5" }
+selected = { bg = "#1f2c4a" }
+
+[pick]
+border   = { fg = "#7ad6f0" }
+active   = { fg = "#b78ee2", bold = true }
+inactive = { fg = "#a3b6d2" }
+
+[confirm]
+border     = { fg = "#7ad6f0" }
+title      = { fg = "#7ad6f0" }
+content    = { fg = "#d4e4f5" }
+list       = { fg = "#bdcfe6" }
+btn_yes    = { fg = "#0e1525", bg = "#84ddb2", bold = true }
+btn_no     = { fg = "#0e1525", bg = "#ec5a72", bold = true }
+btn_labels = [ " [Y]es ", " (N)o " ]
+
+[tasks]
+border  = { fg = "#7ad6f0" }
+title   = { fg = "#d4e4f5" }
+hovered = { fg = "#ace6f7", underline = true }
+
+[which]
+mask            = { bg = "#16203a" }
+cand            = { fg = "#7ad6f0" }
+rest            = { fg = "#6a82a8" }
+desc            = { fg = "#d4e4f5" }
+separator       = "  "
+separator_style = { fg = "#3d5277" }
+
+[help]
+on      = { fg = "#7ad6f0" }
+run     = { fg = "#b78ee2" }
+desc    = { fg = "#a3b6d2" }
+hovered = { bg = "#1f2c4a", bold = true }
+footer  = { fg = "#16203a", bg = "#d4e4f5" }
+
+[notify]
+title_info  = { fg = "#84ddb2" }
+title_warn  = { fg = "#e8cd86" }
+title_error = { fg = "#ec5a72" }
+
+[filetype]
+rules = [
+	# images
+	{ mime = "image/*", fg = "#84ddb2" },
+
+	# videos
+	{ mime = "video/*", fg = "#b78ee2" },
+
+	# audio
+	{ mime = "audio/*", fg = "#5fccc6" },
+
+	# archives
+	{ mime = "application/zip",                  fg = "#ec5a72" },
+	{ mime = "application/gzip",                 fg = "#ec5a72" },
+	{ mime = "application/x-tar",                fg = "#ec5a72" },
+	{ mime = "application/x-bzip",               fg = "#ec5a72" },
+	{ mime = "application/x-bzip2",              fg = "#ec5a72" },
+	{ mime = "application/x-7z-compressed",      fg = "#ec5a72" },
+	{ mime = "application/x-rar",                fg = "#ec5a72" },
+	{ mime = "application/xz",                   fg = "#ec5a72" },
+	{ mime = "application/zstd",                 fg = "#ec5a72" },
+
+	# documents
+	{ mime = "application/pdf",                  fg = "#6fb2ee" },
+	{ mime = "application/msword",               fg = "#6fb2ee" },
+	{ mime = "application/vnd.ms-*",             fg = "#6fb2ee" },
+	{ mime = "application/vnd.openxmlformats-officedocument.*", fg = "#6fb2ee" },
+	{ mime = "application/vnd.oasis.opendocument.*",            fg = "#6fb2ee" },
+	{ mime = "text/*",                           fg = "#6fb2ee" },
+
+	# executables
+	{ name = "*.sh",  fg = "#a4ebc8" },
+	{ name = "*.exe", fg = "#a4ebc8" },
+	{ name = "*.AppImage", fg = "#a4ebc8" },
+
+	# media / dotfiles fallbacks
+	{ name = "*", is = "orphan", fg = "#ec5a72" },
+	{ name = "*", is = "exec",   fg = "#a4ebc8" },
+
+	# directories
+	{ name = "*/", fg = "#7ad6f0" },
+
+	# default
+	{ name = "*", fg = "#d4e4f5" },
+]

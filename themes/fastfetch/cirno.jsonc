@@ -1,0 +1,119 @@
+// Cirno - fastfetch config
+// https://github.com/brickfrog/cirno
+// Install: cp cirno.jsonc ~/.config/fastfetch/config.jsonc   (run: fastfetch)
+// Touhou ice-fairy palette: midnight navy, starlight blue, ice-cyan, one red ribbon.
+{
+    "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+
+    "logo": {
+        // Ice-cyan / starlight gradient for the ASCII logo.
+        "color": {
+            "1": "#7ad6f0",
+            "2": "#ace6f7",
+            "3": "#5b90e4",
+            "4": "#b78ee2"
+        },
+        "padding": {
+            "top": 1,
+            "right": 3
+        }
+    },
+
+    "display": {
+        "separator": " ",
+        "color": {
+            "keys": "#7ad6f0",
+            "title": "#7ad6f0",
+            "output": "#d4e4f5"
+        },
+        "key": {
+            "width": 12
+        },
+        "percent": {
+            "type": [ "num", "bar" ]
+        },
+        "bar": {
+            "charElapsed": "█",
+            "charTotal": "░",
+            "borderLeft": "[",
+            "borderRight": "]"
+        }
+    },
+
+    "modules": [
+        {
+            "type": "title",
+            "color": {
+                "user": "#84ddb2",
+                "at": "#5f7299",
+                "host": "#6fb2ee"
+            }
+        },
+        {
+            "type": "separator",
+            "string": "────────────────────────"
+        },
+        {
+            "type": "os",
+            "key": " OS",
+            "keyColor": "#7ad6f0"
+        },
+        {
+            "type": "kernel",
+            "key": " Kernel",
+            "keyColor": "#6fb2ee"
+        },
+        {
+            "type": "uptime",
+            "key": "󰅐 Uptime",
+            "keyColor": "#9fb6f2"
+        },
+        {
+            "type": "packages",
+            "key": "󰏖 Packages",
+            "keyColor": "#b78ee2"
+        },
+        {
+            "type": "shell",
+            "key": " Shell",
+            "keyColor": "#84ddb2"
+        },
+        {
+            "type": "de",
+            "key": "󰧨 DE",
+            "keyColor": "#5fccc6"
+        },
+        {
+            "type": "wm",
+            "key": " WM",
+            "keyColor": "#5fccc6"
+        },
+        {
+            "type": "terminal",
+            "key": " Terminal",
+            "keyColor": "#9fb6f2"
+        },
+        "break",
+        {
+            "type": "cpu",
+            "key": "󰍛 CPU",
+            "keyColor": "#7ad6f0"
+        },
+        {
+            "type": "gpu",
+            "key": "󰢮 GPU",
+            "keyColor": "#b78ee2"
+        },
+        {
+            "type": "memory",
+            "key": " Memory",
+            "keyColor": "#eca06a"
+        },
+        "break",
+        {
+            "type": "colors",
+            "paddingLeft": 2,
+            "symbol": "circle"
+        }
+    ]
+}

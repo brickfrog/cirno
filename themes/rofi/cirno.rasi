@@ -1,0 +1,163 @@
+/*
+ * Cirno — Touhou ice-fairy Rofi theme
+ * https://github.com/brickfrog/cirno
+ * Install: copy to ~/.config/rofi/cirno.rasi (rofi -show drun -theme cirno)
+ */
+
+* {
+    base:            #0e1525ff;
+    mantle:          #0a1120ff;
+    surface:         #16203aff;
+    surface-alt:     #1f2c4aff;
+    foreground:      #d4e4f5ff;
+    subtext:         #a3b6d2ff;
+    comment:         #5f7299ff;
+    selected:        #7ad6f0ff;
+    selected-text:   #0e1525ff;
+    urgent:          #ec5a72ff;
+    urgent-text:     #0e1525ff;
+    active:          #84ddb2ff;
+    active-text:     #0e1525ff;
+    border-color:    #7ad6f0ff;
+
+    background-color: transparent;
+    text-color:       @foreground;
+    spacing:          0;
+}
+
+window {
+    location:         center;
+    anchor:           center;
+    width:            640px;
+    border:           2px;
+    border-color:     @border-color;
+    border-radius:    14px;
+    background-color: @base;
+    padding:          0;
+}
+
+mainbox {
+    children:         [ inputbar, listview ];
+    padding:          16px;
+    spacing:          12px;
+    background-color: transparent;
+}
+
+inputbar {
+    children:         [ prompt, entry ];
+    background-color: @surface;
+    border-radius:    10px;
+    padding:          10px 14px;
+    spacing:          10px;
+}
+
+prompt {
+    text-color:       @selected;
+    font:             "JetBrainsMono Nerd Font Bold 12";
+    vertical-align:   0.5;
+}
+
+entry {
+    text-color:       @foreground;
+    placeholder:      "Search…";
+    placeholder-color: @comment;
+    vertical-align:   0.5;
+    cursor:           text;
+}
+
+listview {
+    columns:          1;
+    lines:            8;
+    fixed-height:     false;
+    cycle:            true;
+    dynamic:          true;
+    scrollbar:        true;
+    spacing:          4px;
+    background-color: transparent;
+}
+
+element {
+    padding:          8px 12px;
+    border-radius:    10px;
+    spacing:          10px;
+    background-color: transparent;
+    text-color:       @foreground;
+}
+
+element normal.normal {
+    background-color: transparent;
+    text-color:       @foreground;
+}
+
+element normal.urgent {
+    background-color: transparent;
+    text-color:       @urgent;
+}
+
+element normal.active {
+    background-color: transparent;
+    text-color:       @active;
+}
+
+element alternate.normal {
+    background-color: transparent;
+    text-color:       @foreground;
+}
+
+element alternate.urgent {
+    background-color: transparent;
+    text-color:       @urgent;
+}
+
+element alternate.active {
+    background-color: transparent;
+    text-color:       @active;
+}
+
+element selected.normal {
+    background-color: @selected;
+    text-color:       @selected-text;
+}
+
+element selected.urgent {
+    background-color: @urgent;
+    text-color:       @urgent-text;
+}
+
+element selected.active {
+    background-color: @active;
+    text-color:       @active-text;
+}
+
+element-icon {
+    size:             1.2em;
+    vertical-align:   0.5;
+    background-color: transparent;
+    text-color:       inherit;
+}
+
+element-text {
+    vertical-align:   0.5;
+    background-color: transparent;
+    text-color:       inherit;
+}
+
+scrollbar {
+    width:            6px;
+    border:           0;
+    handle-width:     6px;
+    handle-color:     @selected;
+    background-color: @surface;
+    border-radius:    6px;
+}
+
+message {
+    background-color: @surface;
+    border-radius:    10px;
+    padding:          8px 12px;
+}
+
+textbox {
+    text-color:       @subtext;
+    background-color: transparent;
+}

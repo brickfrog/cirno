@@ -1,0 +1,201 @@
+# Cirno - Starship prompt preset
+# https://github.com/brickfrog/cirno
+# Install: cp cirno.toml ~/.config/starship.toml   (or: starship preset ... )
+
+"$schema" = "https://starship.rs/config-schema.json"
+
+palette = "cirno"
+
+format = """
+[](surface0)\
+$os\
+$username\
+$hostname\
+[](fg:surface0 bg:surface1)\
+$directory\
+[](fg:surface1 bg:surface2)\
+$git_branch\
+$git_status\
+[](fg:surface2 bg:overlay0)\
+$nodejs\
+$python\
+$rust\
+$golang\
+$lua\
+$c\
+$java\
+$ruby\
+$php\
+$package\
+[](fg:overlay0)\
+$fill\
+$cmd_duration\
+$time\
+$line_break\
+$character"""
+
+add_newline = true
+
+[palettes.cirno]
+base       = "#0e1525"
+mantle     = "#0a1120"
+crust      = "#070c18"
+surface0   = "#16203a"
+surface1   = "#1f2c4a"
+surface2   = "#2b3c60"
+overlay0   = "#3d5277"
+overlay1   = "#536b91"
+overlay2   = "#6a82a8"
+text       = "#d4e4f5"
+subtext1   = "#bdcfe6"
+subtext0   = "#a3b6d2"
+comment    = "#5f7299"
+ice        = "#7ad6f0"
+frost      = "#ace6f7"
+cyan       = "#4cc6ea"
+teal       = "#5fccc6"
+sky        = "#6fb2ee"
+blue       = "#5b90e4"
+sapphire   = "#3aa9dd"
+periwinkle = "#9fb6f2"
+mauve      = "#b78ee2"
+ribbon     = "#ec5a72"
+flare      = "#f4849a"
+peach      = "#eca06a"
+gold       = "#e8cd86"
+cream      = "#f2dda0"
+mint       = "#84ddb2"
+spring     = "#a4ebc8"
+
+[os]
+disabled = false
+style = "bg:surface0 fg:ice"
+format = "[ $symbol ]($style)"
+
+[os.symbols]
+Arch = ""
+Debian = ""
+Ubuntu = ""
+Fedora = ""
+NixOS = ""
+Macos = ""
+Windows = ""
+Linux = ""
+
+[username]
+show_always = false
+style_user = "bg:surface0 fg:subtext1"
+style_root = "bg:surface0 fg:ribbon bold"
+format = "[ $user ]($style)"
+
+[hostname]
+ssh_only = true
+style = "bg:surface0 fg:sky"
+format = "[ $ssh_symbol$hostname ]($style)"
+ssh_symbol = "󰣀 "
+
+[directory]
+style = "bg:surface1 fg:ice bold"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+read_only = " 󰌾"
+read_only_style = "bg:surface1 fg:ribbon"
+
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = "󰝚 "
+"Pictures" = " "
+"Developer" = "󰲋 "
+
+[git_branch]
+symbol = " "
+style = "bg:surface2 fg:mauve"
+format = "[ $symbol$branch ]($style)"
+
+[git_status]
+style = "bg:surface2 fg:ribbon"
+format = "[$all_status$ahead_behind ]($style)"
+conflicted = "= "
+ahead = "⇡${count} "
+behind = "⇣${count} "
+diverged = "⇕⇡${ahead_count}⇣${behind_count} "
+untracked = "? "
+stashed = "$ "
+modified = "! "
+staged = "+ "
+renamed = "» "
+deleted = "✘ "
+
+[nodejs]
+symbol = " "
+style = "bg:overlay0 fg:mint"
+format = "[ $symbol($version) ]($style)"
+
+[python]
+symbol = " "
+style = "bg:overlay0 fg:gold"
+format = "[ $symbol($version)(\\($virtualenv\\)) ]($style)"
+
+[rust]
+symbol = " "
+style = "bg:overlay0 fg:peach"
+format = "[ $symbol($version) ]($style)"
+
+[golang]
+symbol = " "
+style = "bg:overlay0 fg:cyan"
+format = "[ $symbol($version) ]($style)"
+
+[lua]
+symbol = " "
+style = "bg:overlay0 fg:blue"
+format = "[ $symbol($version) ]($style)"
+
+[c]
+symbol = " "
+style = "bg:overlay0 fg:sky"
+format = "[ $symbol($version) ]($style)"
+
+[java]
+symbol = " "
+style = "bg:overlay0 fg:flare"
+format = "[ $symbol($version) ]($style)"
+
+[ruby]
+symbol = " "
+style = "bg:overlay0 fg:ribbon"
+format = "[ $symbol($version) ]($style)"
+
+[php]
+symbol = " "
+style = "bg:overlay0 fg:periwinkle"
+format = "[ $symbol($version) ]($style)"
+
+[package]
+symbol = "󰏗 "
+style = "bg:overlay0 fg:subtext0"
+format = "[ $symbol$version ]($style)"
+
+[fill]
+symbol = " "
+
+[cmd_duration]
+min_time = 500
+style = "fg:gold"
+format = "[ 󰔟 $duration ]($style)"
+
+[time]
+disabled = false
+time_format = "%R"
+style = "fg:overlay2"
+format = "[ 󰥔 $time ]($style)"
+
+[character]
+success_symbol = "[❯](bold mint)"
+error_symbol = "[❯](bold ribbon)"
+vimcmd_symbol = "[❮](bold ice)"
+vimcmd_replace_one_symbol = "[❮](bold mauve)"
+vimcmd_replace_symbol = "[❮](bold mauve)"
+vimcmd_visual_symbol = "[❮](bold gold)"

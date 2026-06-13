@@ -1,0 +1,38 @@
+# Cirno Day - a Touhou ice-fairy theme (light)
+# https://github.com/brickfrog/cirno
+# Install: copy to ~/.config/wezterm/colors/ then set `config.color_scheme = "Cirno Day"`
+
+[colors]
+foreground    = "#16233d"
+background    = "#eef4fb"
+cursor_bg     = "#0c6f93"
+cursor_fg     = "#eef4fb"
+cursor_border = "#0c6f93"
+selection_bg  = "#bccde4"
+selection_fg  = "#16233d"
+
+ansi = [
+  "#d2deee",
+  "#c4243f",
+  "#0f7e51",
+  "#835f08",
+  "#2f5fcf",
+  "#8a4fc0",
+  "#0c6f93",
+  "#3c4d6c",
+]
+
+brights = [
+  "#90a3c0",
+  "#a81049",
+  "#0c7e50",
+  "#6f5000",
+  "#2d6fc4",
+  "#5163b8",
+  "#0d7193",
+  "#16233d",
+]
+
+[metadata]
+name   = "Cirno Day"
+author = "brickfrog"

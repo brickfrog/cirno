@@ -1,0 +1,44 @@
+# Cirno — an ice-fairy theme for Ghostty
+# Midnight navy, starlight blue, ice-cyan, and one red ribbon.
+# https://github.com/brickfrog/cirno
+#
+# Install:  copy this file to  ~/.config/ghostty/themes/cirno
+# Use:      add  theme = cirno   to ~/.config/ghostty/config
+#           (or  theme = light:cirno-day,dark:cirno  to follow the system)
+
+background = #0e1525
+foreground = #d4e4f5
+
+cursor-color = #7ad6f0
+cursor-text  = #0e1525
+
+selection-background = #1f2c4a
+selection-foreground = #d4e4f5
+
+# search highlights — ice on a deep surface, active match on the ribbon
+search-background          = #1f2c4a
+search-foreground          = #d4e4f5
+search-selected-background = #ec5a72
+search-selected-foreground = #0e1525
+
+split-divider-color  = #16203a
+unfocused-split-fill = #0a1120
+
+# normal
+palette = 0=#16203a
+palette = 1=#ec5a72
+palette = 2=#84ddb2
+palette = 3=#e8cd86
+palette = 4=#5b90e4
+palette = 5=#b78ee2
+palette = 6=#7ad6f0
+palette = 7=#bdcfe6
+# bright
+palette = 8=#3d5277
+palette = 9=#f4849a
+palette = 10=#a4ebc8
+palette = 11=#f2dda0
+palette = 12=#6fb2ee
+palette = 13=#9fb6f2
+palette = 14=#ace6f7
+palette = 15=#d4e4f5
