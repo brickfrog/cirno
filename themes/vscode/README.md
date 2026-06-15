@@ -1,7 +1,7 @@
 # Cirno for VS Code
 
-An ice-fairy theme — midnight navy, starlight blue, ice-cyan, and one red ribbon.
-Ships **Cirno** (dark) and **Cirno Day** (light).
+An ice-fairy theme in midnight navy, starlight blue, ice-cyan, and one red
+ribbon. Includes **Cirno** (dark) and **Cirno Day** (light).
 
 ## Install
 
@@ -21,11 +21,12 @@ npx @vscode/vsce package
 code --install-extension cirno-1.0.0.vsix
 ```
 
-Then open the theme picker — `Ctrl/Cmd+K Ctrl/Cmd+T` — and choose **Cirno** or **Cirno Day**.
+Then open the theme picker with `Ctrl/Cmd+K Ctrl/Cmd+T` and choose **Cirno** or
+**Cirno Day**.
 
 ## Notes
 
 - Semantic highlighting is on; the theme tunes both TextMate scopes and semantic tokens.
 - Bracket-pair colorization cycles through the full Cirno accent set.
-- An `icon.png` (128×128) is referenced by `package.json` if you want a marketplace
-  icon — drop one in before publishing, or remove the `"icon"` key.
+- An `icon.png` (128x128) is referenced by `package.json` if you want a marketplace
+  icon. Add one before publishing, or remove the `"icon"` key.

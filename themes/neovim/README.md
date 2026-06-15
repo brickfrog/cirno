@@ -1,9 +1,9 @@
 # Cirno for Neovim
 
 An ice-fairy colorscheme: midnight navy, starlight blue, ice-cyan, and one red
-ribbon. From Touhou's Cirno. Ships a dark variant (**Cirno**) and a light variant
-(**Cirno Day**), full Treesitter + LSP semantic-token support, and theming for the
-popular plugin ecosystem.
+ribbon. From Touhou's Cirno. Includes a dark variant (**Cirno**) and a light
+variant (**Cirno Day**), Treesitter and LSP semantic-token support, and
+highlights for common plugins.
 
 - Repo: https://github.com/brickfrog/cirno
 

@@ -2,12 +2,12 @@
 
 # ❄️ Cirno
 
-**An ice-fairy theme for your whole desktop.**
-Midnight navy, starlight blue, ice-cyan — and one red ribbon.
+**A desktop color theme based on Cirno.**
+Midnight navy, starlight blue, ice-cyan, and one red ribbon.
 
-<img src="wallpaper/cirno.jpeg" width="720" alt="Cirno wallpaper — a chibi ice fairy beneath a starfield"/>
+<img src="wallpaper/cirno.jpeg" width="720" alt="Cirno wallpaper: a chibi ice fairy beneath a starfield"/>
 
-<sub>Named for [Cirno](https://en.touhouwiki.net/wiki/Cirno), the ⑨ ice fairy of the Touhou Project. The palette is sampled from the wallpaper above — art by [@azumammeri](https://x.com/azumammeri/status/1487768625666994178).</sub>
+<sub>Named for [Cirno](https://en.touhouwiki.net/wiki/Cirno), the ⑨ ice fairy of the Touhou Project. The palette is sampled from the wallpaper above. Artwork by [@azumammeri](https://x.com/azumammeri/status/1487768625666994178).</sub>
 
 ![license](https://img.shields.io/badge/license-MIT-7ad6f0?style=flat-square&labelColor=0e1525)
 ![ports](https://img.shields.io/badge/ports-30-84ddb2?style=flat-square&labelColor=0e1525)
@@ -20,19 +20,19 @@ Midnight navy, starlight blue, ice-cyan — and one red ribbon.
 
 ## The palette
 
-Two variants — **Cirno** (dark) and **Cirno Day** (light) — both contrast-checked
-to clear WCAG AA.
+Two variants: **Cirno** (dark) and **Cirno Day** (light). Both are
+contrast-checked to clear WCAG AA.
 
-![Cirno — dark](assets/palette-dark.png)
-![Cirno Day — light](assets/palette-light.png)
+![Cirno dark](assets/palette-dark.png)
+![Cirno Day light](assets/palette-light.png)
 
-The full rationale — the color theory, the surface ramp, the role map — lives in
+For color notes, token tables, and role mapping, see
 **[`palette/PALETTE.md`](palette/PALETTE.md)**. The machine-readable source of
 truth is **[`palette/cirno.json`](palette/cirno.json)**.
 
-> **One cool base, one warm accent.** The theme lives almost entirely in the blue
-> half of the colour wheel; the single red ribbon does all the "stop / error /
-> attention" work, so it reads instantly without ever shouting.
+> **One cool base, one warm accent.** Most of the theme stays in the blue half of
+> the color wheel. The single red ribbon handles stop, error, and attention
+> states, so they stand out without adding more accent colors.
 
 ## What's inside
 
@@ -59,8 +59,8 @@ truth is **[`palette/cirno.json`](palette/cirno.json)**.
 
 | App | File | Install |
 |-----|------|---------|
-| **VS Code** | [`themes/vscode/`](themes/vscode/) | symlink into `~/.vscode/extensions/` or package a `.vsix` — see its [README](themes/vscode/README.md) |
-| **Neovim** | [`themes/neovim/`](themes/neovim/) | Lua plugin: `require("cirno").setup{}` then `colorscheme cirno` — see its [README](themes/neovim/README.md) |
+| **VS Code** | [`themes/vscode/`](themes/vscode/) | symlink into `~/.vscode/extensions/` or package a `.vsix` (see its [README](themes/vscode/README.md)) |
+| **Neovim** | [`themes/neovim/`](themes/neovim/) | Lua plugin: `require("cirno").setup{}` then `colorscheme cirno` (see its [README](themes/neovim/README.md)) |
 | **Vim** | [`themes/vim/colors/cirno.vim`](themes/vim/colors/cirno.vim) | copy to `~/.vim/colors/`, then `colorscheme cirno` |
 | **Helix** | [`themes/helix/cirno.toml`](themes/helix/cirno.toml) | copy to `~/.config/helix/themes/`, set `theme = "cirno"` |
 
@@ -92,7 +92,7 @@ truth is **[`palette/cirno.json`](palette/cirno.json)**.
 | App | File | Install |
 |-----|------|---------|
 | **bat** | [`themes/bat/Cirno.tmTheme`](themes/bat/Cirno.tmTheme) | copy to bat's `themes/`, `bat cache --build`, `--theme=Cirno` |
-| **delta** | [`themes/delta/cirno.gitconfig`](themes/delta/cirno.gitconfig) | `[include] path = …` from `~/.gitconfig` |
+| **delta** | [`themes/delta/cirno.gitconfig`](themes/delta/cirno.gitconfig) | `[include] path = /path/to/cirno.gitconfig` from `~/.gitconfig` |
 | **lazygit** | [`themes/lazygit/cirno.yml`](themes/lazygit/cirno.yml) | merge the `gui.theme` block into `config.yml` |
 | **yazi** | [`themes/yazi/cirno.toml`](themes/yazi/cirno.toml) | copy to `~/.config/yazi/theme.toml` |
 | **btop** | [`themes/btop/cirno.theme`](themes/btop/cirno.theme) | copy to `~/.config/btop/themes/`, set `color_theme` |
@@ -104,24 +104,25 @@ truth is **[`palette/cirno.json`](palette/cirno.json)**.
 
 ```
 cirno/
-├── palette/
-│   ├── cirno.json      ← single source of truth (variants · ANSI · roles)
-│   └── PALETTE.md      ← the colour theory + full token tables
-├── themes/<app>/       ← one directory per app (30 of them)
-├── scripts/
-│   ├── build_palette.py ← regenerate cirno.json + WCAG contrast check
-│   └── swatches.py      ← render the preview images
-├── assets/             ← palette previews
-└── wallpaper/cirno.jpeg
+|-- palette/
+|   |-- cirno.json       # single source of truth (variants, ANSI, roles)
+|   `-- PALETTE.md       # color notes and token tables
+|-- themes/<app>/        # one directory per app (30 of them)
+|-- scripts/
+|   |-- build_palette.py # regenerate cirno.json and run WCAG checks
+|   `-- swatches.py      # render the preview images
+|-- assets/              # palette previews
+`-- wallpaper/cirno.jpeg
 ```
 
 ## Regenerating
 
-The palette is built and verified from one script — no hand-edited copies drift:
+The palette is built and verified from one script. Do not hand-edit generated
+copies:
 
 ```sh
-python3 scripts/build_palette.py   # → palette/cirno.json, asserts WCAG AA
-python3 scripts/swatches.py        # → assets/*.png
+python3 scripts/build_palette.py   # writes palette/cirno.json and checks WCAG AA
+python3 scripts/swatches.py        # writes assets/*.png
 ```
 
 ## Contributing
