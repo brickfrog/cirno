@@ -1,4 +1,4 @@
-" cirno.vim — an ice-fairy colorscheme
+" cirno.vim: an ice-fairy colorscheme
 " Midnight navy, starlight blue, ice-cyan, and one red ribbon. From Touhou's Cirno.
 " https://github.com/brickfrog/cirno
 "
@@ -43,7 +43,7 @@ else
 endif
 
 " --- highlight helper ---------------------------------------------------------
-" s:hi('Group', fg, bg, attr)  — fg/bg are palette keys or 'NONE'; attr e.g. 'bold,italic'
+" s:hi('Group', fg, bg, attr): fg/bg are palette keys or 'NONE'; attr e.g. 'bold,italic'
 function! s:hi(group, fg, bg, ...) abort
   let l:cmd = 'hi ' . a:group
   if a:fg !=# 'NONE'

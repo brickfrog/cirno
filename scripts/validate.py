@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-validate.py — sanity-check every theme file in the repo.
+validate.py: sanity-check every theme file in the repo.
 
 Parses all structured formats (TOML / JSON / JSONC / tmTheme / YAML), balances
 CSS/rasi braces, and confirms every hex used is a real Cirno palette colour (or
@@ -59,6 +59,8 @@ allowed |= {
     "bfe4f0", "e8eff8", "dde7f3", "2a1622", "5a2230", "102a20", "2f6a4d",
     "2b1722", "4a2330", "dbe7f6", "f6dde2", "f3ecd5", "2a2418", "0e2030",
     "04070f", "ff5577",
+    # claude-code port: diff + message-background tints
+    "14241d", "241820", "142a2a",
 }
 five = re.compile(r"#([0-9a-fA-F]{5})(?![0-9a-fA-F])")
 bad = collections.defaultdict(set)
@@ -83,5 +85,5 @@ if bad:
 else:
     print("  ok   every #hex is a Cirno colour")
 
-print("\n" + ("ALL CHECKS PASS ❄️" if ok else "FAILURES — see above"))
+print("\n" + ("ALL CHECKS PASS ❄️" if ok else "FAILURES: see above"))
 sys.exit(0 if ok else 1)

@@ -1,4 +1,4 @@
-# Cirno — an ice-fairy theme for Ghostty
+# Cirno: an ice-fairy theme for Ghostty
 # Midnight navy, starlight blue, ice-cyan, and one red ribbon.
 # https://github.com/brickfrog/cirno
 #
@@ -15,7 +15,7 @@ cursor-text  = #0e1525
 selection-background = #1f2c4a
 selection-foreground = #d4e4f5
 
-# search highlights — ice on a deep surface, active match on the ribbon
+# search highlights: ice on a deep surface, active match on the ribbon
 search-background          = #1f2c4a
 search-foreground          = #d4e4f5
 search-selected-background = #ec5a72

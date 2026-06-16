@@ -48,7 +48,7 @@ def render(variant, path):
     fbig, fname, fhex = font(34), font(18), fmono(15)
     d.text((pad, 20), f"Cirno{'' if variant=='dark' else ' Day'}", font=fbig,
            fill=p["ice"])
-    sub = "dark — midnight, ice & one red ribbon" if variant == "dark" else "light — fresh snow at high noon"
+    sub = "dark: midnight, ice & one red ribbon" if variant == "dark" else "light: fresh snow at high noon"
     d.text((pad+220, 32), sub, font=fname, fill=p["comment"])
     for i, name in enumerate(ORDER):
         c = p[name]

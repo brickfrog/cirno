@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-build_palette.py — the single source of truth for the Cirno theme.
+build_palette.py: the single source of truth for the Cirno theme.
 
 Cirno is the ice fairy of Touhou. The palette is pulled directly from the
 project wallpaper (wallpaper/cirno.jpeg): a midnight-navy starfield with a
@@ -17,7 +17,7 @@ WCAG AA against the background it sits on. No third-party deps.
 import json, os, sys
 
 # --------------------------------------------------------------------------
-# Dark variant — "Cirno": night sky over snow.
+# Dark variant ("Cirno"): night sky over snow.
 # A cool, low-saturation navy base so long sessions don't fatigue the eyes,
 # starlight-blue text, ice-cyan as the primary accent, and the red ribbon as
 # the single warm complement. Hue families are spaced far enough apart that
@@ -27,7 +27,7 @@ DARK = {
     "name": "Cirno",
     "appearance": "dark",
     # backgrounds, darkest -> lightest (the night sky + its surfaces)
-    "crust":     "#070c18",  # deepest — window borders, behind-the-gutter
+    "crust":     "#070c18",  # deepest; window borders, behind-the-gutter
     "mantle":    "#0a1120",  # sidebars, inactive panels
     "base":      "#0e1525",  # main editor / terminal background (midnight)
     "surface0":  "#16203a",  # current-line, subtle panels
@@ -40,9 +40,9 @@ DARK = {
     "text":      "#d4e4f5",  # main text
     "subtext1":  "#bdcfe6",
     "subtext0":  "#a3b6d2",
-    "comment":   "#5f7299",  # muted slate — recedes but stays readable
+    "comment":   "#5f7299",  # muted slate; recedes but stays readable
     # accents
-    "ice":       "#7ad6f0",  # PRIMARY — Cirno's eyes (functions / links / cursor)
+    "ice":       "#7ad6f0",  # PRIMARY: Cirno's eyes (functions / links / cursor)
     "frost":     "#ace6f7",  # bright cyan
     "cyan":      "#4cc6ea",  # deeper ice
     "teal":      "#5fccc6",  # frost-on-glass green-cyan
@@ -51,7 +51,7 @@ DARK = {
     "sapphire":  "#3aa9dd",  # between blue and cyan
     "periwinkle":"#9fb6f2",  # the dusty mauve horizon, lifted
     "mauve":     "#b78ee2",  # frost violet (magenta family)
-    "ribbon":    "#ec5a72",  # RED — her bow; errors, the warm pop
+    "ribbon":    "#ec5a72",  # RED: her bow; errors, the warm pop
     "flare":     "#f4849a",  # bright red
     "peach":     "#eca06a",  # warm horizon glow (rare; constants)
     "gold":      "#e8cd86",  # cream starlight (warnings, strings-alt)
@@ -61,7 +61,7 @@ DARK = {
 }
 
 # --------------------------------------------------------------------------
-# Light variant — "Cirno Day": the same fairy at high noon over fresh snow.
+# Light variant ("Cirno Day"): the same fairy at high noon over fresh snow.
 # Pale icy paper, deep-navy ink, and the accents darkened just enough to clear
 # AA on a light field while keeping the same identity.
 # --------------------------------------------------------------------------
@@ -100,7 +100,7 @@ LIGHT = {
 }
 
 # --------------------------------------------------------------------------
-# ANSI 16 mapping — shared by every terminal port so all of them agree.
+# ANSI 16 mapping, shared by every terminal port so all of them agree.
 # cyan(6) is deliberately the signature ice; red(1) is the ribbon.
 # --------------------------------------------------------------------------
 def ansi(p):
@@ -116,7 +116,7 @@ def ansi(p):
     }
 
 # --------------------------------------------------------------------------
-# Semantic roles — how the palette maps onto syntax, shared by all editors.
+# Semantic roles: how the palette maps onto syntax, shared by all editors.
 # --------------------------------------------------------------------------
 def roles(p):
     return {
@@ -189,7 +189,7 @@ def build():
         "$schema": "https://json-schema.org/draft-07/schema#",
         "meta": {
             "name": "Cirno",
-            "description": "An ice-fairy theme — midnight navy, starlight blue, "
+            "description": "An ice-fairy theme in midnight navy, starlight blue, "
                            "ice-cyan, and a single red ribbon. From the Touhou "
                            "character Cirno; colours sampled from the wallpaper.",
             "author": "justin@justin.vc",
@@ -215,7 +215,7 @@ if __name__ == "__main__":
     for name, p in (("dark", DARK), ("light", LIGHT)):
         worst, fails = validate(p)
         status = "OK " if not fails else "FAIL"
-        print(f"  [{status}] {p['name']:10s} ({name}) — worst accent contrast "
+        print(f"  [{status}] {p['name']:10s} ({name}): worst accent contrast "
               f"vs base = {worst:.2f}:1")
         for fl in fails:
             ok = False

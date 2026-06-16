@@ -10,7 +10,7 @@ Midnight navy, starlight blue, ice-cyan, and one red ribbon.
 <sub>Named for [Cirno](https://en.touhouwiki.net/wiki/Cirno), the ⑨ ice fairy of the Touhou Project. The palette is sampled from the wallpaper above. Artwork by [@azumammeri](https://x.com/azumammeri/status/1487768625666994178).</sub>
 
 ![license](https://img.shields.io/badge/license-MIT-7ad6f0?style=flat-square&labelColor=0e1525)
-![ports](https://img.shields.io/badge/ports-30-84ddb2?style=flat-square&labelColor=0e1525)
+![ports](https://img.shields.io/badge/ports-31-84ddb2?style=flat-square&labelColor=0e1525)
 ![variants](https://img.shields.io/badge/variants-dark%20%2B%20light-b78ee2?style=flat-square&labelColor=0e1525)
 ![wcag](https://img.shields.io/badge/contrast-WCAG%20AA-e8cd86?style=flat-square&labelColor=0e1525)
 
@@ -36,7 +36,7 @@ truth is **[`palette/cirno.json`](palette/cirno.json)**.
 
 ## What's inside
 
-30 apps, 48 files. Dark everywhere; light (**Cirno Day**) where the format supports it.
+31 apps, 49 files. Dark everywhere; light (**Cirno Day**) where the format supports it.
 
 ### Terminals
 
@@ -97,6 +97,7 @@ truth is **[`palette/cirno.json`](palette/cirno.json)**.
 | **yazi** | [`themes/yazi/cirno.toml`](themes/yazi/cirno.toml) | copy to `~/.config/yazi/theme.toml` |
 | **btop** | [`themes/btop/cirno.theme`](themes/btop/cirno.theme) | copy to `~/.config/btop/themes/`, set `color_theme` |
 | **fastfetch** | [`themes/fastfetch/cirno.jsonc`](themes/fastfetch/cirno.jsonc) | use as `~/.config/fastfetch/config.jsonc` |
+| **Claude Code** | [`themes/claude-code/cirno.json`](themes/claude-code/cirno.json) | copy to `~/.claude/themes/cirno.json`, then `/theme` → Cirno |
 
 > Each theme file opens with a comment header giving its exact one-line install.
 
@@ -107,7 +108,7 @@ cirno/
 |-- palette/
 |   |-- cirno.json       # single source of truth (variants, ANSI, roles)
 |   `-- PALETTE.md       # color notes and token tables
-|-- themes/<app>/        # one directory per app (30 of them)
+|-- themes/<app>/        # one directory per app (31 of them)
 |-- scripts/
 |   |-- build_palette.py # regenerate cirno.json and run WCAG checks
 |   `-- swatches.py      # render the preview images
